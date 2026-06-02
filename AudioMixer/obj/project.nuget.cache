@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "10QD7DFLz/g=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ignat\\RiderProjects\\AudioMixer\\AudioMixer\\AudioMixer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ignat\\.nuget\\packages\\naudio.core\\2.3.0\\naudio.core.2.3.0.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\naudio.wasapi\\2.3.0\\naudio.wasapi.2.3.0.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.android-arm.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.android-arm.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.android-arm64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.android-arm64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.android-x64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.android-x64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.android-x86.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.android-x86.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.linux-arm.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.linux-arm64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.linux-bionic-arm64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.linux-bionic-arm64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.linux-bionic-x64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.linux-bionic-x64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.linux-musl-arm.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.linux-musl-arm.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.linux-musl-arm64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.linux-musl-arm64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.linux-musl-x64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.linux-musl-x64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.linux-x64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.maccatalyst-arm64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.maccatalyst-arm64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.maccatalyst-x64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.maccatalyst-x64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.osx-arm64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\11.0.0-preview.4.26230.115\\runtime.osx-x64.runtime.native.system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512",
+    "C:\\Users\\ignat\\.nuget\\packages\\system.io.ports\\11.0.0-preview.4.26230.115\\system.io.ports.11.0.0-preview.4.26230.115.nupkg.sha512"
+  ],
+  "logs": []
+}
