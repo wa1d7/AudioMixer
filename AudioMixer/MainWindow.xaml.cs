@@ -24,9 +24,8 @@ namespace AuraMixer
         private string _serialBuffer = "";
         
         private readonly int[] _previousValues = { -1, -1, -1, -1, -1 };
-        private const int DEADZONE = 5; // Наш шумодав
+        private const int DEADZONE = 5; 
 
-        // Массивы для быстрой связи индекса ползунка с элементами на экране
         private TextBlock[] _volTexts;
         private TextBlock[] _rawTexts;
 
@@ -34,7 +33,7 @@ namespace AuraMixer
         {
             InitializeComponent();
 
-            // Инициализируем массивы элементов интерфейса
+     
             _volTexts = new[] { TxtVol0, TxtVol1, TxtVol2, TxtVol3, TxtVol4 };
             _rawTexts = new[] { TxtRaw0, TxtRaw1, TxtRaw2, TxtRaw3, TxtRaw4 };
 
@@ -45,7 +44,7 @@ namespace AuraMixer
         {
             try
             {
-                // Укажи здесь свой COM-порт! Скорость — наши реактивные 115200
+           
                 _serialPort = new SerialPort("COM3", 115200);
                 _serialPort.DataReceived += Port_DataReceived;
                 _serialPort.Open();
@@ -85,14 +84,14 @@ namespace AuraMixer
                                 float volumePercent = currentValue / 1023f;
                                 _previousValues[i] = currentValue;
 
-                                // --- ДОБАВЛЯЕМ ВЫЗОВЫ МЕТОДОВ ЗДЕСЬ ---
-                                if (i == 4) // Если дергаем нулевой (первый) ползунок
+                             
+                                if (i == 4) 
                                 {
                                     SetMasterVolume(volumePercent);
                                 }
-                                else if (i == 3) // Если дергаем первый (второй) ползунок
+                                else if (i == 3) 
                                 {
-                                    // ВПИШИ СЮДА СВОЙ ПРОЦЕСС ДЛЯ ТЕСТА (без .exe)
+                                   
                                     SetProcessVolume("spotify", volumePercent); 
                                 }
 
@@ -114,7 +113,7 @@ namespace AuraMixer
             }
             catch (Exception ex)
             {
-                // Ошибки тоже выводим строго через Dispatcher
+              
                 Dispatcher.Invoke(() => { Title = $"Ошибка: {ex.Message}"; });
             }
         }
@@ -126,9 +125,9 @@ namespace AuraMixer
                 using var device = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
                 device.AudioEndpointVolume.MasterVolumeLevelScalar = volume;
             }
-            catch { /* Игнорируем ошибки аудио-сессий */ }
+            catch {  }
         }
-        // 📱 Метод управления громкостью КОНКРЕТНОГО процесса
+      
         private void SetProcessVolume(string processName, float volume)
         {
             try
@@ -141,30 +140,30 @@ namespace AuraMixer
                 {
                     var session = sessions[i];
                     uint pid = session.GetProcessID;
-                    if (pid == 0) continue; // Пропускаем системные звуки без PID
+                    if (pid == 0) continue; 
 
                     try
                     {
-                        // Получаем имя процесса по его ID
+                   
                         using var process = Process.GetProcessById((int)pid);
                         if (string.Equals(process.ProcessName, processName, StringComparison.OrdinalIgnoreCase))
                         {
-                            // Нашли! Меняем громкость внутри аудио-сессии Windows
+                           
                             session.SimpleAudioVolume.Volume = volume;
                         }
                     }
                     catch
                     {
-                        // Процесс мог закрыться прямо во время итерации, просто идем дальше
+                        
                     }
                 }
             }
-            catch { /* Игнорируем ошибки аудио-сессий */ }
+            catch {  }
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            // Корректно закрываем порт при выходе, чтобы не вешать систему
+          
             if (_serialPort is { IsOpen: true })
             {
                 _serialPort.Close();
