@@ -6,9 +6,11 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <UseWPF>true</UseWPF>
+        <UseWindowsForms>true</UseWindowsForms>
     </PropertyGroup>
 
     <ItemGroup>
+        <Using Remove="System.Windows.Forms" />
       <PackageReference Include="NAudio.Wasapi" Version="2.3.0" />
       <PackageReference Include="System.IO.Ports" Version="11.0.0-preview.4.26230.115" />
     </ItemGroup>

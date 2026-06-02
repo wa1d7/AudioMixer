@@ -5,49 +5,96 @@
         Background="#0f172a" WindowStartupLocation="CenterScreen"
         Closing="Window_Closing">
 
-    <UniformGrid Columns="5" Margin="20">
-        
-        <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
-            <Grid>
-                <StackPanel VerticalAlignment="Center">
-                    <TextBlock Text="CH 1" Foreground="#38bdf8" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
-                    <TextBlock x:Name="TxtVol0" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
-                    <TextBlock x:Name="TxtRaw0" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <DockPanel Grid.Row="0" Margin="20,15,20,0">
+                <TextBlock Text="AURA MIXER" Foreground="White" FontSize="20" FontWeight="Black" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                <Button x:Name="BtnOpenSettings" Content="⚙️ Настройки" HorizontalAlignment="Right" Width="120" Height="35" Background="#334155" Foreground="White" BorderThickness="0" Click="BtnOpenSettings_Click"/>
+            </DockPanel>
+
+            <UniformGrid Columns="5" Margin="20" Grid.Row="1">
+                
+                <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
+                    <Grid>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="CH 1" Foreground="#a78bfa" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="TxtVol0" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
+                            <TextBlock x:Name="TxtRaw0" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
+                            <ComboBox x:Name="ComboProcess0" Background="#0f172a" Foreground="Black" Padding="5" Margin="0,10,0,0" DropDownOpened="Combo_DropDownOpened" SelectionChanged="Combo_SelectionChanged"/>
+                            <TextBox x:Name="InputProcess0" Visibility="Collapsed" Background="#0f172a" Foreground="White" BorderBrush="#475569" Padding="5" Margin="0,5,0,0" HorizontalContentAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="CH 2" Foreground="#a78bfa" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="TxtVol1" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
+                        <TextBlock x:Name="TxtRaw1" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
+                        <ComboBox x:Name="ComboProcess1" Background="#0f172a" Foreground="Black" Padding="5" Margin="0,10,0,0" DropDownOpened="Combo_DropDownOpened" SelectionChanged="Combo_SelectionChanged"/>
+                        <TextBox x:Name="InputProcess1" Visibility="Collapsed" Background="#0f172a" Foreground="White" BorderBrush="#475569" Padding="5" Margin="0,5,0,0" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="CH 3" Foreground="#a78bfa" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="TxtVol2" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
+                        <TextBlock x:Name="TxtRaw2" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
+                        <ComboBox x:Name="ComboProcess2" Background="#0f172a" Foreground="Black" Padding="5" Margin="0,10,0,0" DropDownOpened="Combo_DropDownOpened" SelectionChanged="Combo_SelectionChanged"/>
+                        <TextBox x:Name="InputProcess2" Visibility="Collapsed" Background="#0f172a" Foreground="White" BorderBrush="#475569" Padding="5" Margin="0,5,0,0" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="CH 4" Foreground="#a78bfa" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="TxtVol3" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
+                        <TextBlock x:Name="TxtRaw3" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
+                        <ComboBox x:Name="ComboProcess3" Background="#0f172a" Foreground="Black" Padding="5" Margin="0,10,0,0" DropDownOpened="Combo_DropDownOpened" SelectionChanged="Combo_SelectionChanged"/>
+                        <TextBox x:Name="InputProcess3" Visibility="Collapsed" Background="#0f172a" Foreground="White" BorderBrush="#475569" Padding="5" Margin="0,5,0,0" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="CH 5" Foreground="#a78bfa" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock x:Name="TxtVol4" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
+                        <TextBlock x:Name="TxtRaw4" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
+                        <ComboBox x:Name="ComboProcess4" Background="#0f172a" Foreground="Black" Padding="5" Margin="0,10,0,0" DropDownOpened="Combo_DropDownOpened" SelectionChanged="Combo_SelectionChanged"/>
+                        <TextBox x:Name="InputProcess4" Visibility="Collapsed" Background="#0f172a" Foreground="White" BorderBrush="#475569" Padding="5" Margin="0,5,0,0" HorizontalContentAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+            </UniformGrid>
+        </Grid>
+
+        <Grid x:Name="SettingsOverlay" Visibility="Collapsed" Background="#e60f172a">
+            <Border Background="#1e293b" Width="400" Height="300" CornerRadius="15" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="25">
+                <StackPanel>
+                    <TextBlock Text="НАСТРОЙКИ" Foreground="White" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20"/>
+                    
+                    <TextBlock Text="Подключение (COM Порт):" Foreground="#94a3b8" Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                        <ComboBox x:Name="ComboComPort" Width="100" IsEditable="True" Background="#0f172a" Foreground="White" Margin="0,0,10,0" DropDownOpened="ComboComPort_DropDownOpened"/>
+                        <Button x:Name="BtnConnect" Content="Подключить" Width="100" Background="#3b82f6" Foreground="White" BorderThickness="0" Click="BtnConnect_Click"/>
+                    </StackPanel>
+
+                    <TextBlock Text="Оборудование:" Foreground="#94a3b8" Margin="0,0,0,5"/>
+                    <ToggleButton x:Name="ToggleReverse" Content="🔄 Инверсия: ВКЛ" IsChecked="True" Height="30" Background="#334155" Foreground="White" BorderBrush="#475569" Margin="0,0,0,15" Click="ToggleReverse_Click"/>
+
+                    <TextBlock Text="Система:" Foreground="#94a3b8" Margin="0,0,0,5"/>
+                    <CheckBox x:Name="CheckAutoStart" Content="Запускать вместе с Windows" Foreground="White" Margin="0,0,0,20" Checked="CheckAutoStart_Changed" Unchecked="CheckAutoStart_Changed"/>
+
+                    <Button Content="Закрыть настройки" Height="35" Background="#ef4444" Foreground="White" BorderThickness="0" Click="BtnCloseSettings_Click"/>
                 </StackPanel>
-            </Grid>
-        </Border>
+            </Border>
+        </Grid>
 
-        <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="CH 2" Foreground="#38bdf8" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="TxtVol1" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
-                <TextBlock x:Name="TxtRaw1" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Border>
-
-        <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="CH 3" Foreground="#38bdf8" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="TxtVol2" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
-                <TextBlock x:Name="TxtRaw2" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Border>
-
-        <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="CH 4" Foreground="#38bdf8" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="TxtVol3" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
-                <TextBlock x:Name="TxtRaw3" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Border>
-
-        <Border Background="#1e293b" Margin="8" CornerRadius="12" Padding="15">
-            <StackPanel VerticalAlignment="Center">
-                <TextBlock Text="CH 5" Foreground="#38bdf8" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <TextBlock x:Name="TxtVol4" Text="0%" Foreground="White" FontSize="36" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,15"/>
-                <TextBlock x:Name="TxtRaw4" Text="Raw: 0" Foreground="#64748b" FontSize="13" HorizontalAlignment="Center"/>
-            </StackPanel>
-        </Border>
-
-    </UniformGrid>
+    </Grid>
 </Window>

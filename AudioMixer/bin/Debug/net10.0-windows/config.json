@@ -1,0 +1,19 @@
+{
+  "ComPort": "COM3",
+  "IsSlidersReversed": true,
+  "SelectedItems": [
+    "Main (Master)",
+    "Other...",
+    "Current App",
+    "Spotify",
+    "msedge"
+  ],
+  "CustomProcesses": [
+    "",
+    "msedge. spotify",
+    "",
+    "",
+    ""
+  ],
+  "AutoStart": true
+}
